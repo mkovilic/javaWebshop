@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>mytags</short-name>
+    <uri>kova/tlds</uri>
+
+    <tag-file>
+        <name>menu</name>
+        <path>/WEB-INF/tags/menu.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>products</name>
+        <path>/WEB-INF/tags/products.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>product</name>
+        <path>/WEB-INF/tags/product.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>productcheckout</name>
+        <path>/WEB-INF/tags/productcheckout.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>shopingCart</name>
+        <path>/WEB-INF/tags/shopingCart.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>bill</name>
+        <path>/WEB-INF/tags/bill.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>navbar</name>
+        <path>/WEB-INF/tags/navbar.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>cart</name>
+        <path>/WEB-INF/tags/cart.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>test</name>
+        <path>/WEB-INF/tags/test.tag</path>
+    </tag-file>
+</taglib>

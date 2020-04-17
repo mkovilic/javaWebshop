@@ -1,0 +1,25 @@
+#row {
+
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 40%;
+    padding: 10px;
+
+}
+
+table {
+    border-collapse: collapse;
+    height: 75%;
+    display: block;
+    border: 1px solid black;
+    margin-top: 50px;
+    position: fixed;
+    background: white;
+    padding: 20px;
+}
+
+.table-log {
+    overflow-y: scroll;
+}

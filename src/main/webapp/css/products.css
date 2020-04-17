@@ -1,0 +1,47 @@
+.big-table{
+    margin: 0 auto 0;
+}
+.small-table{
+    align-content: right;
+}
+.small-table td{
+    width: 25vh;
+    height: 50%;
+}
+.products ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.img-product{
+    width: 200px;
+    height: auto
+}
+
+#h1{
+    text-align: center;
+    margin-left: 30%;
+}
+@media screen and (min-width: 701px) {
+    #row {
+
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 30%;
+
+    }
+}
+@media screen and (max-width: 600px) {
+    #row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 1%;
+        width: -moz-fit-content;
+        margin-right: 5%;
+
+    }
+}
