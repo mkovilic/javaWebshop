@@ -45,4 +45,8 @@
         <name>test</name>
         <path>/WEB-INF/tags/test.tag</path>
     </tag-file>
+    <tag-file>
+        <name>kart</name>
+        <path>/WEB-INF/tags/kart.tag</path>
+    </tag-file>
 </taglib>

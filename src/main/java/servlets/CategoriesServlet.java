@@ -24,7 +24,7 @@ public class CategoriesServlet extends HttpServlet {
 
         RequestDispatcher rd =
                 getServletContext().getRequestDispatcher(
-                        "/category.jsp");
+                        "/index.jsp");
         rd.forward(req,resp);
     }
 }

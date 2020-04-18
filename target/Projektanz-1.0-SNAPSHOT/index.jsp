@@ -6,12 +6,12 @@
 <html lang="en">
 
 <head>
-
+    <script src="js/index.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
     <title>Kova shop</title>
 
     <!-- Bootstrap core CSS -->
@@ -48,7 +48,11 @@
 <div class="container">
 
     <div class="row">
-
+      <%--  <c:forEach items="${products}" var="item">
+            <li><kova:products
+                    product="${item}"></kova:products></li>
+            <hr>
+        </c:forEach>--%>
         <div class="col-lg-3">
 
             <%-- <h1 class="my-4"></h1>--%>
@@ -69,6 +73,7 @@
             <p class="nav-link" id="navbarSupportedContent" href="#" style="font-size: 43px;letter-spacing: 0.228em;font-weight: 600;font-style: normal; margin-left: 27%;/*! text-align: end; */">
                 </i>
                 KOVA SHOP
+            <a href="product?idProduct=3"></a>
             </p>
 
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -98,9 +103,9 @@
                 </a>
             </div>
 
-            <div class="row">
+            <div class="row" id="data">
 
-                <div class="col-lg-4 col-md-6 mb-4">
+             <%--   <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="#"><img class="card-img-top" src="img/gigabyte1070ti.jpg" alt=""></a>
                         <div class="card-body" id="gpu">
@@ -128,7 +133,7 @@
                         <a href="#"><img class="card-img-top" src="img/gigabyte1080ti.jpg" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#"<%--http://localhost:8085/Projektanz_war_exploded/product?idProduct=2--%> style="text-decoration: none" class="text-info" data-toggle="collapse"
+                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=2&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
                                    data-target="#2"> Gigabyte GTX 1080 ti</a>
                                 <div id="2" class="collapse">
                                     <form class="form-add" action="addBag" method="post">
@@ -151,7 +156,7 @@
                         <a href="#"><img class="card-img-top" src="img/gigabyte2070ti.jpg" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#"<%--http://localhost:8085/Projektanz_war_exploded/product?idProduct=3--%> style="text-decoration: none" class="text-info" data-toggle="collapse"
+                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=3&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
                                    data-target="#3">Gigabyte
                                     GTX 2070 ti</a>
                                 <div class="collapse" id="3">
@@ -174,7 +179,7 @@
                         <a href="#"><img class="card-img-top" src="img/i79700k.jpg" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="<%--http://localhost:8085/Projektanz_war_exploded/product?idProduct=6--%>" style="text-decoration: none" class="text-info" data-toggle="collapse"
+                                <a href="&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=6&ndash;%&gt;" style="text-decoration: none" class="text-info" data-toggle="collapse"
                                    data-target="#4">Intel i7 9700k</a>
                                 <div id="4" class="collapse">
                                     <form class="form-add" action="addBag" method="post">
@@ -197,7 +202,7 @@
                         <a href="#"><img class="card-img-top" src="img/ax370.png" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#"<%--http://localhost:8085/Projektanz_war_exploded/product?idProduct=7--%> style="text-decoration: none" class="text-info" data-toggle="collapse"
+                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=7&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
                                    data-target="#5">ASUS AX370-GamingG3</a>
                                 <div id="5" class="collapse">
                                     <form class="form-add" action="addBag" method="post">
@@ -219,7 +224,7 @@
                         <a href="#"><img class="card-img-top" src="img/kingston32gb.jpg" alt=""></a>
                         <div class="card-body" id="ram">
                             <h4 class="card-title">
-                                <a href="#"<%--http://localhost:8085/Projektanz_war_exploded/product?idProduct=9--%> style="text-decoration: none" class="text-info" data-toggle="collapse"
+                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=9&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
                                    data-target="#6">HyperX Predator</a>
                                 <div id="6" class="collapse">
                                     <form class="form-add" action="addBag" method="post">
@@ -235,7 +240,10 @@
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         </div>
                     </div>
-                </div>
+                </div>--%>
+                <c:forEach items="${products}" var="item" begin="0" end="18" step="3">
+                    <kova:test product="${item}"></kova:test>
+                </c:forEach>
 
             </div>
             <!-- /.row -->
@@ -258,10 +266,26 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<%--<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
-<script src="js/script.js"></script>
-<script src="js/bs4.pop.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script type='text/javascript'>
+
+    (function()
+    {
+        if( window.localStorage )
+        {
+            if( !localStorage.getItem( 'firstLoad' ) )
+            {
+                localStorage[ 'firstLoad' ] = true;
+                window.location.reload();
+            }
+
+            else
+                localStorage.removeItem( 'firstLoad' );
+        }
+    })();
+
+</script>
 </body>
 
 </html>

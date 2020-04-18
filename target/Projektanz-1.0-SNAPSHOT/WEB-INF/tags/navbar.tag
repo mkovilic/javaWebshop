@@ -34,35 +34,28 @@
                     Products
                 </a>
             </li>
- <%--           <li class="nav-item">
+         <%--   <li class="nav-item">
                 <a class="nav-link" href="categories">
                     <i class="fa fa-layer-group"></i>
                     Categories
                 </a>
             </li>--%>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="# " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="categories" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-layer-group"></i>
                     Categories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <ul class="navbar-nav dropdownItems">
-                <%--        <c:forEach items="${categories}"
+                        <c:forEach items="${categories}"
                                    var="item">
 
                             <li><a class="dropdown-item"
                                    href="viewCategory?idCategory=${item.categoryId}">${item.title}</a>
                             </li>
 
-                        </c:forEach>--%>
-                        <li>
-                            <a  href="http://localhost:8085/Projektanz_war_exploded/viewCategory?idCategory=1" class="dropdown-item ">Graphic cards</a>
-                            <a href="http://localhost:8085/Projektanz_war_exploded/viewCategory?idCategory=2" class="dropdown-item ">Processors</a>
-                            <a href="http://localhost:8085/Projektanz_war_exploded/viewCategory?idCategory=3" class="dropdown-item ">Motherboards</a>
-                            <a href="http://localhost:8085/Projektanz_war_exploded/viewCategory?idCategory=4" class="dropdown-item ">Power supply</a>
-                            <a href="http://localhost:8085/Projektanz_war_exploded/viewCategory?idCategory=5" class="dropdown-item ">RAM</a>
+                        </c:forEach>
 
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -108,3 +101,8 @@
         </c:choose>
     </div>
 </nav>
+<script>
+    $.get('categories', function(data) {
+
+    });
+</script>
