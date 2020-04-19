@@ -17,12 +17,15 @@
         <a href="#"><img class="card-img-top" src=${product.img} ></a>
         <div class="card-body">
             <h4 class="card-title">
-                <a href="#" style="text-decoration:none" class="text-info" data-toggle="collapse" data-target="#${product.productId}">${product.title}</a>
+                <a href="#" style="text-decoration:none" class="text-info" data-toggle="collapse"
+                   data-target="#${product.productId}">${product.title}</a>
                 <div id="${product.productId}" class="collapse">
                     <form class="form-add" action="addBag" method="post">
                         <input type="hidden" name="idProduct" value="${product.productId}"/>
                         <button type="submit" class="btn btn-info btn-add">Add to cart</button>
                     </form>
+            <%--        <a href="#" data-name=${product.title} data-price=${product.price}
+                       class="add-to-cart btn btn-primary">Add to cart</a>--%>
                 </div>
             </h4>
             <h5>${product.price} kn</h5>

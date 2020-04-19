@@ -39,7 +39,7 @@ $(()=>{
     // Login Register Form
     $('#logreg-forms #btn-signup').click(toggleSignUp);
     $('#logreg-forms #cancel_signup').click(toggleSignUp);
-})
+});
 
 $('#btn').on('click',function(){
     $('#one').hide('slow')
@@ -56,5 +56,5 @@ $('#mydialog').on('click',function (e) {
         className:''
     })
 
-})
+});
 

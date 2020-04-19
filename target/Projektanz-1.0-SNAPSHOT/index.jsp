@@ -48,11 +48,6 @@
 <div class="container">
 
     <div class="row">
-      <%--  <c:forEach items="${products}" var="item">
-            <li><kova:products
-                    product="${item}"></kova:products></li>
-            <hr>
-        </c:forEach>--%>
         <div class="col-lg-3">
 
             <%-- <h1 class="my-4"></h1>--%>
@@ -105,142 +100,6 @@
 
             <div class="row" id="data">
 
-             <%--   <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/gigabyte1070ti.jpg" alt=""></a>
-                        <div class="card-body" id="gpu">
-                            <h4 class="card-title">
-                                <a href="#" style="text-decoration: none" class="text-info" data-toggle="collapse" data-target="#1">Gigabyte GTX 1070 ti</a>
-                                <div id="1" class="collapse">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="1"/>
-                                        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>3000,00 kn</h5>
-                            <p class="card-text">
-                                -Brand new Gigabyte 1070 ti graphic card-</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/gigabyte1080ti.jpg" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=2&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
-                                   data-target="#2"> Gigabyte GTX 1080 ti</a>
-                                <div id="2" class="collapse">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="2"/>
-                                        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>3500,00 kn</h5>
-                            <p class="card-text">-Brand new Gigabyte 1080 ti graphic card-</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/gigabyte2070ti.jpg" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=3&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
-                                   data-target="#3">Gigabyte
-                                    GTX 2070 ti</a>
-                                <div class="collapse" id="3">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="3"/>
-                                        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>5000,00 kn</h5>
-                            <p class="card-text">-Brand new Gigabyte 2070 ti graphic card-</p>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/i79700k.jpg" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=6&ndash;%&gt;" style="text-decoration: none" class="text-info" data-toggle="collapse"
-                                   data-target="#4">Intel i7 9700k</a>
-                                <div id="4" class="collapse">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="6"/>
-                                        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>3500,00 kn</h5>
-                            <p class="card-text">-Brand new Intel i7 9700k processor-</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/ax370.png" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=7&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
-                                   data-target="#5">ASUS AX370-GamingG3</a>
-                                <div id="5" class="collapse">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="7"/>
-                                        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>3000,00 kn</h5>
-                            <p class="card-text">-Brand new Gigabyte AX370-GamingG3 motherboard-</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="img/kingston32gb.jpg" alt=""></a>
-                        <div class="card-body" id="ram">
-                            <h4 class="card-title">
-                                <a href="#"&lt;%&ndash;http://localhost:8085/Projektanz_war_exploded/product?idProduct=9&ndash;%&gt; style="text-decoration: none" class="text-info" data-toggle="collapse"
-                                   data-target="#6">HyperX Predator</a>
-                                <div id="6" class="collapse">
-                                    <form class="form-add" action="addBag" method="post">
-                                        <input type="hidden" name="idProduct" value="9"/>
-                                        <button type="submit" class="btn btn-info btn-add" id="mydialog">Add to cart</button>
-                                    </form>
-                                </div>
-                            </h4>
-                            <h5>1700,00 kn</h5>
-                            <p class="card-text">-Brand new Kingston HyperX Predator|32GB|DDR4 RAM </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>--%>
                 <c:forEach items="${products}" var="item" begin="0" end="18" step="3">
                     <kova:test product="${item}"></kova:test>
                 </c:forEach>
@@ -268,7 +127,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/index.js" type="text/javascript"></script>
-<script type='text/javascript'>
+<%--<script type='text/javascript'>
 
     (function()
     {
@@ -285,7 +144,7 @@
         }
     })();
 
-</script>
+</script>--%>
 </body>
 
 </html>

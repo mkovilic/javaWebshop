@@ -2,6 +2,7 @@ package servlets;
 
 import model.BagItem;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +28,10 @@ public class BagAddOne extends HttpServlet {
         }
         float sum = utils.Utils.calculateTotalSum(bagSession);
         req.getSession().setAttribute("sum",sum);
-        resp.sendRedirect("bag.jsp");
+        RequestDispatcher rd =
+                getServletContext().getRequestDispatcher(
+                        "/bag.jsp");
+        rd.forward(req, resp);
+    /*    resp.sendRedirect("bag.jsp");*/
     }
 }

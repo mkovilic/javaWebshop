@@ -44,8 +44,10 @@
             </td>
             <td>
                 <div class="bag-manipulation">
-                    <button class="btn btn-light" style="width: 35px" onclick="bagRemoveOne(this.value)" value="${bagItem.product.productId}">-</button>
-                    <button class="btn btn-light" style="width: 35px" onclick="bagAddOne(this.value)" value="${bagItem.product.productId}">+</button>
+                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="remove?idProduct=${bagItem.product.productId}">
+                        <%--   value="${bagItem.product.productId}">--%>-</a>
+                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="add?idProduct=${bagItem.product.productId}">
+                        <%--   value="${bagItem.product.productId}">--%>+</a>
                 </div>
             </td>
         </tr>

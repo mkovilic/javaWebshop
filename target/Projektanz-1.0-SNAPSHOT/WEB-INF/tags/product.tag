@@ -21,9 +21,13 @@
         <div class="row product-info"><b>Price:
             ${product.price} kn </b></div>
     </div>
+<%--
+    <a href="#" data-name=${product.title} data-price=${product.price}
+       class="add-to-cart btn btn-info">Add to cart</a>
+--%>
 
     <form class="form-add" action="addBag" method="post">
         <input type="hidden" name="idProduct" value="${product.productId}"/>
-        <button type="submit" class="btn btn-info btn-add">Add</button>
+        <button type="submit" class="btn btn-info btn-add">Add to cart</button>
     </form>
 </div>

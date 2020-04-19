@@ -3,6 +3,7 @@ package servlets;
 import model.BagItem;
 import utils.Utils;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,8 +41,13 @@ public class CartRemoveOne extends HttpServlet {
         req.getSession().setAttribute("bagSession",bagSession);
         float sum= Utils.calculateTotalSum(bagSession);
         req.getSession().setAttribute("sum",sum);
-
+        RequestDispatcher rd =
+                getServletContext().getRequestDispatcher(
+                        "/bag.jsp");
+        rd.forward(req, resp);
+/*
         resp.sendRedirect("bag.jsp");
+*/
     }
 
 }
