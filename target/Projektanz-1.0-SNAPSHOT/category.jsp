@@ -12,8 +12,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Category</title>
+    <title>Categories</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
 
 </head>
@@ -25,10 +24,7 @@
             <ul>
                 <c:forEach items="${categories}"
                            var="item">
-
-                    <li><a
-                            href="viewCategory?idCategory=${item.categoryId}">${item.title}</a></li>
-
+                    <li><a href="viewCategory?idCategory=${item.categoryId}">${item.title}</a></li>
                 </c:forEach>
             </ul>
         </div>

@@ -15,7 +15,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-
     <link href="css/checkout.css" rel="stylesheet" type="text/css"/>
 
 </head>
@@ -24,9 +23,9 @@
 <div id="row">
     <h2>Checkout</h2>
     <div id="row product-bag">
-        <C:forEach items="${bagSession}"
+        <C:forEach items="${cartSession}"
                    var="item">
-            <kova:productcheckout bagItem="${item}"></kova:productcheckout>
+            <kova:productcheckout cart="${item}"></kova:productcheckout>
             <hr>
         </C:forEach>
     </div>
@@ -59,51 +58,8 @@
 
  <%--SCRIPTS--%>
 
-
-<%--<script src="https://www.paypalobjects.com/api/checkout.js"></script>
-<script>
-    paypal.Button.render({
-        // Configure environment
-        env: 'sandbox',
-        client: {
-            sandbox: 'demo_sandbox_client_id',
-            production: 'demo_production_client_id'
-        },
-        // Customize button (optional)
-        locale: 'en_US',
-        style: {
-            size: 'small',
-            color: 'gold',
-            shape: 'pill',
-        },
-
-        // Enable Pay Now checkout flow (optional)
-        commit: true,
-
-        // Set up a payment
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [{
-                    amount: {
-                        total: '${sum}',
-                        currency: 'HRK'
-                    }
-                }]
-            });
-        },
-        // Execute the payment
-        onAuthorize: function(data, actions) {
-            return actions.payment.execute().then(function() {
-                // Show a confirmation message to the buyer
-                window.location.href="paypal";
-            });
-        }
-    }, '#paypal-button');
-
-</script>--%>
 <script src="https://www.paypal.com/sdk/js?client-id=sb">
 </script>
-
 <script>
     paypal.Buttons({
         createOrder: function(data, actions) {

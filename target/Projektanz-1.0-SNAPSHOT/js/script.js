@@ -24,7 +24,7 @@ function checkout(){
     location.href="checkout";
 }
 function showBag(){
-    location.href="bag.jsp";
+    location.href="cart.jsp";
 }
 function viewBill(IDBill){
     location.href="viewBill?idBill"+IDBill;
@@ -39,7 +39,7 @@ $(()=>{
     // Login Register Form
     $('#logreg-forms #btn-signup').click(toggleSignUp);
     $('#logreg-forms #cancel_signup').click(toggleSignUp);
-})
+});
 
 $('#btn').on('click',function(){
     $('#one').hide('slow')
@@ -56,5 +56,5 @@ $('#mydialog').on('click',function (e) {
         className:''
     })
 
-})
+});
 

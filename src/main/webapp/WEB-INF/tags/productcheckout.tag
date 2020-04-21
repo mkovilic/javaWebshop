@@ -7,37 +7,37 @@
 --%>
 <%@tag description="checkout tag" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@attribute name="bagItem" type="model.BagItem"
+<%@attribute name="cart" type="model.Cart"
              required="true" %>
 
 <div class="product">
     <table class="big-table">
         <tr>
             <td>
-                <img src="${bagItem.product.img}"
+                <img src="${cart.product.img}"
                      class="img-product" alt="neam poma"/>
             </td>
             <td>
                 <table class="small-table">
                     <tr>
                         <td>
-                            ${bagItem.product.brand}
+                            ${cart.product.brand}
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            ${bagItem.product.title}
+                            ${cart.product.title}
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            ${bagItem.product.price}kn
+                            ${cart.product.price}kn
                         </td>
                     </tr>
 
                 </table>
             </td>
-            <td>Quantity:${bagItem.quantity}</td>
+            <td>Quantity:${cart.quantity}</td>
         </tr>
     </table>
 </div>

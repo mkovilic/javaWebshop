@@ -1,5 +1,7 @@
 package model;
 
+import java.net.InetAddress;
+
 public class LogInfo {
     private int LogInfoId;
     private int CustomerId;
@@ -12,7 +14,8 @@ public class LogInfo {
         this.IPAdress = IPAdress;
     }
 
-    public LogInfo(int logInfoId, int customerId, String logDate, String IPAdress) {
+    public LogInfo(int logInfoId, int customerId, String logDate,
+                   String IPAdress) {
         LogInfoId = logInfoId;
         CustomerId = customerId;
         LogDate = logDate;

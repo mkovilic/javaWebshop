@@ -20,7 +20,7 @@
                 <a href="#" style="text-decoration:none" class="text-info" data-toggle="collapse"
                    data-target="#${product.productId}">${product.title}</a>
                 <div id="${product.productId}" class="collapse">
-                    <form class="form-add" action="addBag" method="post">
+                    <form class="form-add" action="cart" method="post">
                         <input type="hidden" name="idProduct" value="${product.productId}"/>
                         <button type="submit" class="btn btn-info btn-add">Add to cart</button>
                     </form>

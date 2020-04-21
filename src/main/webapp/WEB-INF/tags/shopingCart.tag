@@ -9,45 +9,45 @@
 <%@ taglib prefix="c"
            uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@attribute name="bagItem" type="model.BagItem"
+<%@attribute name="cart" type="model.Cart"
              required="true" %>
 
 <div class="product">
     <table class="big-table">
         <tr>
             <td>
-                <img src="${bagItem.product.img} "
+                <img src="${cart.product.img} "
                      class="img-product"/>
             </td>
             <td>
                 <table class="small-table">
                     <tr>
                         <td>
-                            <span><b>Brand: </b></span> ${bagItem.product.brand}
+                            <span><b>Brand: </b></span> ${cart.product.brand}
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span><b>Model:</b> </span> ${bagItem.product.title}
+                            <span><b>Model:</b> </span> ${cart.product.title}
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span><b>Price: </b></span>  ${bagItem.product.price}
+                            <span><b>Price: </b></span>  ${cart.product.price}
                         </td>
                     </tr>
 
                 </table>
             </td>
             <td>
-                Quantity: ${bagItem.quantity}
+                Quantity: ${cart.quantity}
             </td>
             <td>
                 <div class="bag-manipulation">
-                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="remove?idProduct=${bagItem.product.productId}">
-                        <%--   value="${bagItem.product.productId}">--%>-</a>
-                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="add?idProduct=${bagItem.product.productId}">
-                        <%--   value="${bagItem.product.productId}">--%>+</a>
+                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="remove?idProduct=${cart.product.productId}">
+                        <%--   value="${cart.product.productId}">--%>-</a>
+                    <a class="btn btn-light" style="width: 35px"<%-- onclick="bagRemoveOne(this.value)"--%> href="add?idProduct=${cart.product.productId}">
+                        <%--   value="${cart.product.productId}">--%>+</a>
                 </div>
             </td>
         </tr>

@@ -26,7 +26,7 @@
        class="add-to-cart btn btn-info">Add to cart</a>
 --%>
 
-    <form class="form-add" action="addBag" method="post">
+    <form class="form-add" action="cart" method="post">
         <input type="hidden" name="idProduct" value="${product.productId}"/>
         <button type="submit" class="btn btn-info btn-add">Add to cart</button>
     </form>

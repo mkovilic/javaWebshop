@@ -18,22 +18,27 @@ public class LoginServlet extends HttpServlet {
     private static final String ADMIN_PASSWORD = "admin";
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest req,
+                          HttpServletResponse resp)
             throws ServletException, IOException {
         IRepo repo = RepoFactory.getRepo();
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
 
-        if (username.equalsIgnoreCase(ADMIN_USERNAME) && password.equalsIgnoreCase(ADMIN_PASSWORD)) {
-            request.getSession().setAttribute("admin", ADMIN_USERNAME);
-            response.sendRedirect("index.jsp");
-        } else if (repo.checkCustomer(username, password)) {
-            request.getSession().setAttribute("username", username);
-            Utils.createLog(username, request);
-            response.sendRedirect("index.jsp");
-        } else {
-            response.sendRedirect("login.jsp");
+        if (repo.checkCustomer(username,password)){
+            req.getSession().setAttribute("username",username);
+
+            utils.Utils.createLog(username,req);
+            resp.sendRedirect("index.jsp");
+
+        }
+        else if(username.equalsIgnoreCase(ADMIN_USERNAME)&& password.equalsIgnoreCase(ADMIN_PASSWORD)){
+            req.getSession().setAttribute("admin",ADMIN_USERNAME);
+            resp.sendRedirect("index.jsp");
+        }
+        else{
+            resp.sendRedirect("login.jsp");
         }
 
     }

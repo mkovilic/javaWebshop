@@ -1,6 +1,6 @@
 package servlets;
 
-import model.BagItem;
+import model.Cart;
 import model.Bill;
 import model.Customer;
 import repo.IRepo;
@@ -22,8 +22,8 @@ public class OrderSuccessfullServelet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         IRepo iRepo= RepoFactory.getRepo();
 
-        List<BagItem> bagSession=
-                (List<BagItem>) req.getSession().getAttribute("bagSession");
+        List<Cart> bagSession=
+                (List<Cart>) req.getSession().getAttribute("bagSession");
         String email= (String) req.getSession().getAttribute(
                 "username");
         Customer c = Utils.getCustomerFromEmail(email);

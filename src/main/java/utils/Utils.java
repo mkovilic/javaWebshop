@@ -1,6 +1,6 @@
 package utils;
 
-import model.BagItem;
+import model.Cart;
 import model.Customer;
 import model.LogInfo;
 import repo.IRepo;
@@ -11,31 +11,29 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class Utils {
-    public static float calculateTotalSum(List<BagItem> bagItems) {
+    public static float calculateTotalSum(List<Cart> carts) {
         float sum= 0;
-        if (bagItems != null) {
-            for (BagItem bagItem : bagItems) {
-                sum += bagItem.getProduct().getPrice() * bagItem.getQuantity();
+        if (carts != null) {
+            for (Cart cart : carts) {
+                sum += cart.getProduct().getPrice() * cart.getQuantity();
             }
         }
 
         return sum;
     }
-
-    public static void createLog(String username, HttpServletRequest request) {
-        String ipAdress = request.getRemoteAddr();
-        String date = getTodaysDate();
-        IRepo repo = RepoFactory.getRepo();
-        int c = -1;
+    public static void createLog(String username, HttpServletRequest request){
+        String ipAdress=request.getRemoteAddr();
+        String date=getTodaysDate();
+        IRepo repo=RepoFactory.getRepo();
+        int c=-1;
         for (Customer customer : repo.getAllCustomers()) {
             if (customer.getEmail().equals(username)) {
-                c = customer.getCustomerId();
+                c=customer.getCustomerId();
             }
         }
-        LogInfo logInfo = new LogInfo(c, date, ipAdress);
+        LogInfo logInfo=new LogInfo(c, date, ipAdress);
         try {
             repo.insertLogInfo(logInfo);
         } catch (Exception e) {

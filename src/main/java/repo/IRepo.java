@@ -2,8 +2,6 @@ package repo;
 
 import model.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 import java.util.List;
 
 public interface IRepo {
@@ -18,7 +16,7 @@ public interface IRepo {
     Product getProduct(int id);
     List<PaymentMethod> getAllPaymentMethods();
     List<Bill> getAllBills();
-    void insertBill(Bill b, List<BagItem> bagItems);
+    void insertBill(Bill b, List<Cart> carts);
     Bill getBill (int id);
     List<Bill> getAllBillsForCustomer(int id);
     List<Item> getItemsForBill(int id);

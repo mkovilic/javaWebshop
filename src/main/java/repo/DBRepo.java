@@ -2,11 +2,7 @@ package repo;
 
 import model.*;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -229,7 +225,7 @@ public class DBRepo implements IRepo {
     }
 
     @Override
-    public void insertBill(Bill b, List<BagItem> bagItems) {
+    public void insertBill(Bill b, List<Cart> carts) {
         int billID;
 
         DataSource dataSource = DataSourceSingleton.getInstance();
@@ -245,7 +241,7 @@ public class DBRepo implements IRepo {
             billID = stmt.getInt(4);
 
             try(CallableStatement stmt2 = con.prepareCall(INSERT_ITEM)){
-                for (BagItem bi : bagItems) {
+                for (Cart bi : carts) {
                     stmt2.setInt(1, bi.getProduct().getProductId());
                     stmt2.setInt(2, billID);
                     stmt2.setInt(3, bi.getQuantity());

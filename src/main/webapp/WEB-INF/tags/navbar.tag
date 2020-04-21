@@ -13,9 +13,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <%-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  --%>
-    <link href="fontawesome-free-5.13.0-web/css/all.css" type="text/css" rel="stylesheet">
+    <link href="css/all.css" type="text/css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
@@ -59,9 +57,10 @@
             </c:if>
 
         </ul>
+        <%--CART--%>
         <ul class="navbar-nav ">
             <li class="nav-item">
-                <a class="nav-link" href="bag.jsp" <%--data-toggle="modal" data-target="#cart"--%>>
+                <a class="nav-link" href="cart.jsp" <%--data-toggle="modal" data-target="#cart"--%>>
                     <i class="fa fa-shopping-cart">
                         <span class="badge badge-success"><%--<span class="total-count">--%>9</span></span>
                     </i>
@@ -69,6 +68,7 @@
                 </a>
             </li>
         </ul>
+        <%--TEST IF IT'S USER OR ADMIN LOGGED IN--%>
         <c:if test="${sessionScope.username != null}">
             <form action="user" method="post" class="form-inline my-2 my-lg-0">
                 <button type="submit"
@@ -93,48 +93,7 @@
         </c:choose>
     </div>
 </nav>
-<%--<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body frame ">
-                &lt;%&ndash; <table class="show-cart table">
 
-                 </table>
-                 <div>Total price: $<span class="total-cart"></span></div>&ndash;%&gt;
-
-                    <h1>Shopping cart</h1>
-
-                        <c:choose>
-                            <c:when test="${ sum !=null }">
-                                <c:forEach items="${bagSession}" var="item">
-                                    <kova:shopingCart bagItem="${item}"></kova:shopingCart>
-                                    <hr>
-                                </c:forEach>
-                            </c:when>
-                            <c:otherwise>
-                                <h2> The cart is empty...</h2>
-                            </c:otherwise>
-                        </c:choose>
-
-                        Total: ${sum}kn
-
-                        <button class="btn btn-info my-2 my-sm-0" onclick="checkout()">Checkout</button>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="checkout()">Checkout</button>
-                    <button class="clear-cart btn btn-danger">Clear Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>--%>
     <script>
         $.get('categories', function (data) {
         });
@@ -145,7 +104,7 @@
     </script>--%>
 <%--    <script type="text/javascript">
         $('document').ready(function(){
-            $('div.frame').load('bag.jsp');
+            $('div.frame').load('cart.jsp');
         });
     </script>--%>
 

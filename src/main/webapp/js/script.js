@@ -24,7 +24,7 @@ function checkout(){
     location.href="checkout";
 }
 function showBag(){
-    location.href="bag.jsp";
+    location.href="cart.jsp";
 }
 function viewBill(IDBill){
     location.href="viewBill?idBill"+IDBill;
