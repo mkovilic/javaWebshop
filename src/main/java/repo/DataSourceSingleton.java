@@ -10,10 +10,10 @@ import java.sql.SQLException;
 
 public class DataSourceSingleton {
 
-    private static final String SERVER_NAME="kova.database.windows.net";
+    private static final String SERVER_NAME="localhost";
     private static final String DATABSE_NAME="WebShop";
-    private static final String USER="kova";
-    private static final String PASSWORD="MALIkreten65";
+    private static final String USER="sa";
+    private static final String PASSWORD="SQL";
 
     private static DataSource createInstance() {
         SQLServerDataSource dataSource= new SQLServerDataSource();
