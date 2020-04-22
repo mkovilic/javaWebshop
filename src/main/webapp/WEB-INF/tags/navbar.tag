@@ -13,7 +13,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/all.css" type="text/css" rel="stylesheet">
+    <%-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  --%>
+    <link href="fontawesome-free-5.13.0-web/css/all.css" type="text/css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">

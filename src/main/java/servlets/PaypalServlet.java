@@ -21,18 +21,18 @@ public class PaypalServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         IRepo iRepo= RepoFactory.getRepo();
 
-        List<Cart> bagSession=
-                (List<Cart>) req.getSession().getAttribute("bagSession");
+        List<Cart> cartSession=
+                (List<Cart>) req.getSession().getAttribute("cartSession");
         String email= (String) req.getSession().getAttribute(
                 "username");
         Customer c = Utils.getCustomerFromEmail(email);
         String date = Utils.getTodaysDate();
 
         Bill b= new Bill(date,c.getCustomerId(),1);
-        iRepo.insertBill(b,bagSession);
+        iRepo.insertBill(b,cartSession);
 
-        if (req.getSession().getAttribute("bagSession")!=null){
-            req.getSession().removeAttribute("bagSession");
+        if (req.getSession().getAttribute("cartSession")!=null){
+            req.getSession().removeAttribute("cartSession");
         }
         if (req.getSession().getAttribute("sum")!=null){
             req.getSession().removeAttribute("sum");

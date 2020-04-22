@@ -19,10 +19,10 @@ public class RemoveFromCart extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int idProduct = Integer.parseInt(req.getParameter("idProduct"));
-        List<Cart> bagSession =
-                (List<Cart>) req.getSession().getAttribute("bagSession");
+        List<Cart> cartSession =
+                (List<Cart>) req.getSession().getAttribute("cartSession");
         Cart bRemove = null;
-        for (Cart cart : bagSession) {
+        for (Cart cart : cartSession) {
             if (cart.getProduct().getProductId() == idProduct) {
                 if (cart.getQuantity() > 1) {
                     int quantity = cart.getQuantity();
@@ -36,9 +36,9 @@ public class RemoveFromCart extends HttpServlet {
                 }
             }
 
-        bagSession.remove(bRemove);
-        req.getSession().setAttribute("bagSession",bagSession);
-        float sum= Utils.calculateTotalSum(bagSession);
+        cartSession.remove(bRemove);
+        req.getSession().setAttribute("cartSession",cartSession);
+        float sum= Utils.calculateTotalSum(cartSession);
         req.getSession().setAttribute("sum",sum);
         RequestDispatcher rd =
                 getServletContext().getRequestDispatcher(
